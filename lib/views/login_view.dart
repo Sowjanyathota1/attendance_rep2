@@ -1,129 +1,87 @@
-import 'package:andriod/views/attendence_view.dart';
-import 'package:andriod/views/registration_view.dart';
-import 'package:andriod/views/student_view.dart';
 import 'package:flutter/material.dart';
 
-import 'adminhome_view.dart';
-import 'cummulative_view.dart';
+import 'periodattendence_view.dart';
 import 'faculty_view.dart';
+import 'home_view.dart';
 
 class Login extends StatelessWidget {
-  void _handleAttendance() {
-    // Implement attendance action
-  }
-
-  void _handleCumulativeAttendance() {
-    // Implement cumulative attendance action
-  }
-
-  void _handleFacultyRegister() {
-    // Implement faculty register action
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.purple),
       home: Scaffold(
         appBar: AppBar(
-          surfaceTintColor: Color.fromARGB(255, 122, 57, 135),
-          shadowColor: Color.fromARGB(255, 121, 24, 124),
-          backgroundColor: Color.fromARGB(255, 127, 60, 147),
-          leading: PopupMenuButton<String>(
-            onSelected: (value) {
-              if (value == 'attendance') {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Student()));
-                _handleAttendance();
-              } else if (value == 'cumulativeAttendance') {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CumulativeAttendanceScreen()));
-                _handleCumulativeAttendance();
-              } else if (value == 'facultyRegister') {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Register()));
-                _handleFacultyRegister();
-              }
+          backgroundColor:
+              Color.fromARGB(255, 110, 25, 111), // Dark purple color
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Faculty()));
+              // Handle back button tap
             },
-            itemBuilder: (BuildContext context) => [
-              PopupMenuItem<String>(
-                value: 'attendance',
-                child: Text('Attendance'),
-              ),
-              PopupMenuItem<String>(
-                value: 'cumulativeAttendance',
-                child: Text('Cumulative Attendance'),
-              ),
-              PopupMenuItem<String>(
-                value: 'facultyRegister',
-                child: Text('Faculty Register'),
-              ),
-            ],
           ),
-          // Make the app bar transparent
-          // Remove the shadow
+          title: Text(
+            'Login Page',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.home),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+                // Handle home icon tap
+              },
+            ),
+          ],
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.network(
-                  "https://image3.mouthshut.com/images/imagesp/925716539s.png"),
-              SizedBox(height: 40), // Adjust spacing as needed
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApp()));
-                  //Implement Admin button onPressed action
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple, // Set button color
-                  padding: EdgeInsets.symmetric(
-                      horizontal: 20, vertical: 15), // Set button padding
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(
+                    "https://media.istockphoto.com/id/1212272730/vector/vector-illustration-online-education-or-e-learning-concept.jpg?s=612x612&w=0&k=20&c=BX-o7e8LrnUto1JSKI0suRQoB1xW1HVsVibaMey_sts="),
+                _buildTextFieldWithIcon(Icons.mail, 'Email'),
+                SizedBox(height: 20),
+                _buildTextFieldWithIcon(Icons.lock, 'Password',
+                    isPassword: true),
+                SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Post()));
+                    // Handle submit button tap
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 113, 30, 110),
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    textStyle: TextStyle(fontSize: 18),
+                  ),
+                  child: Text('Login'),
                 ),
-                icon: Icon(Icons.person),
-                label: Text(
-                  'Admin',
-                  style: TextStyle(fontSize: 20), // Set button label font size
-                ),
-              ),
-              SizedBox(height: 10),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Faculty()));
-                  // Implement Faculty button onPressed action
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                ),
-                icon: Icon(Icons.group),
-                label: Text(
-                  'Faculty',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              SizedBox(height: 10),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => StudentPage()));
-                  // Implement Student button onPressed action
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                ),
-                icon: Icon(Icons.school),
-                label: Text(
-                  'Student',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTextFieldWithIcon(IconData icon, String hintText,
+      {bool isPassword = false}) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: TextField(
+        obscureText: isPassword,
+        decoration: InputDecoration(
+          prefixIcon: Icon(icon),
+          hintText: hintText,
+          border: OutlineInputBorder(),
         ),
       ),
     );

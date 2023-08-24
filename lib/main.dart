@@ -15,7 +15,8 @@
 //import 'package:andriod/periodattendence_view.dart';
 //import 'package:andriod/views/dummy_view.dart';
 //import 'package:andriod/views/dummy_view.dart';
-import 'package:andriod/views/home_view.dart';
+//import 'package:andriod/views/home_view.dart';
+import 'package:andriod/views/login_view.dart';
 //import 'package:andriod/views/home_view.dart';
 //
 //import 'package:andriod/views/resent_view.dart';
@@ -29,7 +30,7 @@ import 'package:flutter/material.dart';
 void main() {
   // ignore: prefer_const_constructors
   runApp(MaterialApp(
-    home: Home(),
+    home: Login(),
     debugShowCheckedModeBanner: false,
   ));
 }

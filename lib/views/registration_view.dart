@@ -1,6 +1,7 @@
+import 'package:andriod/views/login_view.dart';
 import 'package:flutter/material.dart';
 
-import 'periodattendence_view.dart';
+//import 'periodattendence_view.dart';
 import 'faculty_view.dart';
 import 'home_view.dart';
 
@@ -46,7 +47,9 @@ class Register extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.network(
-                    "https://media.istockphoto.com/id/1227150854/vector/learn-from-distance-with-teacher-online-education-kids-boy-and-girl-is-sitting-on-laptop-and.jpg?s=612x612&w=0&k=20&c=wPYqFgjGpi9m6BWwKw-Bsz76oqfd0m-hFJcxNyccyMM=",fit: BoxFit.contain,),
+                  "https://media.istockphoto.com/id/1227150854/vector/learn-from-distance-with-teacher-online-education-kids-boy-and-girl-is-sitting-on-laptop-and.jpg?s=612x612&w=0&k=20&c=wPYqFgjGpi9m6BWwKw-Bsz76oqfd0m-hFJcxNyccyMM=",
+                  fit: BoxFit.contain,
+                ),
                 _buildTextFieldWithIcon(Icons.person, 'User name'),
                 SizedBox(height: 8),
                 _buildTextFieldWithIcon(Icons.pin, 'Code'),
@@ -57,8 +60,9 @@ class Register extends StatelessWidget {
                     isPassword: true),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Post()));
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                     // Handle submit button tap
                   },
                   style: ElevatedButton.styleFrom(
