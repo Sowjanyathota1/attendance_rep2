@@ -1,9 +1,10 @@
 import 'package:andriod/views/home_view.dart';
 import 'package:flutter/material.dart';
 
+import 'faculty_view.dart';
 import 'periodattendence_view.dart';
 //import 'faculty_view.dart';
-import 'home_view.dart';
+
 
 class Register extends StatelessWidget {
   @override

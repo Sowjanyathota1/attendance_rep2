@@ -1,9 +1,10 @@
+import 'package:andriod/views/faculty_view.dart';
 import 'package:andriod/views/home_view.dart';
 import 'package:andriod/views/sheet_view.dart';
 import 'package:flutter/material.dart';
 
 //import 'faculty_view.dart';
-import 'home_view.dart';
+//import 'home_view.dart';
 
 class Selection extends StatelessWidget {
   @override
