@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
           decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/dropping.png"
+                    "assets/lavendor.jpg"
                   ),
                   fit: BoxFit.cover)),
           child: Column(
@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                   // Implement privacy button onPressed action
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
+                  primary: Color.fromARGB(255, 224, 148, 237),
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 ),
                 icon: Icon(Icons.privacy_tip),
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                   // Implement remove button onPressed action
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
+                  primary: const Color.fromARGB(255, 212, 150, 223),
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 ),
                 icon: Icon(Icons.delete),
@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                   // Implement add details button onPressed action
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
+                  primary: const Color.fromARGB(255, 215, 141, 228),
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 ),
                 icon: Icon(Icons.add),
