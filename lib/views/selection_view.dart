@@ -1,7 +1,8 @@
+import 'package:andriod/views/periodattendence_view.dart';
 import 'package:andriod/views/sheet_view.dart';
 import 'package:flutter/material.dart';
 
-import 'faculty_view.dart';
+//import 'faculty_view.dart';
 import 'home_view.dart';
 
 class Selection extends StatelessWidget {
@@ -16,7 +17,7 @@ class Selection extends StatelessWidget {
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Faculty()));
+                  context, MaterialPageRoute(builder: (context) => Post()));
               // Handle back button tap
             },
           ),

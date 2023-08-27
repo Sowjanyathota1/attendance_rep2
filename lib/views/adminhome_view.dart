@@ -1,6 +1,7 @@
+import 'package:andriod/views/selectsms.view.dart';
 import 'package:andriod/views/settings_view.dart';
 import 'package:flutter/material.dart';
-import 'sent_view.dart';
+//import 'sent_view.dart';
 import 'home_view.dart';
 
 class MyApp extends StatefulWidget {
@@ -35,7 +36,7 @@ class AdminLoginPage extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.home),
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Settings()));
@@ -90,7 +91,7 @@ class AdminLoginPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => StudentAttendanceApp()));
+                          builder: (context) => Selectsms()));
                   // Handle login submission
                 },
                 child: Text('Submit'),

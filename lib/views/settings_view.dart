@@ -1,9 +1,11 @@
+import 'package:andriod/views/periodattendence_view.dart';
 import 'package:andriod/views/privacy_view.dart';
-import 'package:andriod/views/remove_view.dart';
+//import 'package:andriod/views/remove_view.dart';
+import 'package:andriod/views/selectsms.view.dart';
 import 'package:flutter/material.dart';
 
-import 'add_view.dart';
-import 'adminhome_view.dart';
+//import 'add_view.dart';
+//import 'adminhome_view.dart';
 import 'home_view.dart';
 
 class Settings extends StatelessWidget {
@@ -25,7 +27,7 @@ class HomeScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MyApp()));
+                context, MaterialPageRoute(builder: (context) => Selectsms()));
             // Implement going back
           },
         ),
@@ -49,7 +51,8 @@ class HomeScreen extends StatelessWidget {
           decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/lavendor.jpg"
+                    ".jpg"
+                    
                   ),
                   fit: BoxFit.cover)),
           child: Column(
@@ -75,7 +78,7 @@ class HomeScreen extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Remove()));
+                      MaterialPageRoute(builder: (context) =>  Post()));
                   // Implement remove button onPressed action
                 },
                 style: ElevatedButton.styleFrom(
@@ -92,7 +95,7 @@ class HomeScreen extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Add()));
+                      context, MaterialPageRoute(builder: (context) =>  Post()));
                   // Implement add details button onPressed action
                 },
                 style: ElevatedButton.styleFrom(

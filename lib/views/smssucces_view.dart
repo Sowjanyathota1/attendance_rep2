@@ -1,9 +1,9 @@
-import 'package:andriod/views/sheet_view.dart';
+import 'package:andriod/views/sent_view.dart';
 import 'package:flutter/material.dart';
 
 import 'home_view.dart';
 
-class Postedadmin extends StatelessWidget {
+class Postedad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class Postedadmin extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Sheet()));
+                  MaterialPageRoute(builder: (context) =>StudentAttendanceApp()));
             // Handle back button tap
           },
         ),
@@ -43,7 +43,7 @@ class Postedadmin extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              "ATTENDANCE HAS BEEN  SUCCESFULLY POSTED",
+              "SMS HAS BEEN SENT SUCESSFULLY",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

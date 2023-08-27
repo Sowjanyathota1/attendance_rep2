@@ -1,4 +1,5 @@
 import 'package:andriod/views/postadmin_view.dart';
+import 'package:andriod/views/selection_view.dart';
 
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _SheetState extends State<Sheet> {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Post()));
+                context, MaterialPageRoute(builder: (context) => Selection()));
             // Handle back button tap
           },
         ),

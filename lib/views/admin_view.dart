@@ -34,7 +34,6 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(Icons.admin_panel_settings),
             SizedBox(width: 8.0),
             Text('Admin Page'),
           ],
