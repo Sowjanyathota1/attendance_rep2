@@ -173,14 +173,6 @@ class Selection extends StatelessWidget {
                     textStyle: TextStyle(fontSize: 18),
                   ),
                   child: Text('Click here'),
-                ),Stack(
-                  alignment: Alignment.bottomLeft,
-                  children: [
-                    Image.asset(
-                      "assets/frame2.jpg", // Replace with your asset image path
-                      height: 220,width: 4000,fit: BoxFit.cover,// Adjust the height as needed
-                    ),
-                  ],
                 ),
               ],
             ),
