@@ -24,7 +24,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
+        appBar: AppBar( title: Text(
+          'ATTENDANCE :)',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),centerTitle: true,
           surfaceTintColor: Color.fromARGB(255, 122, 57, 135),
           shadowColor: Color.fromARGB(255, 121, 24, 124),
           backgroundColor: Color.fromARGB(255, 127, 60, 147),
