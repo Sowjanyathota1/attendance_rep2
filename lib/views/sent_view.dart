@@ -1,5 +1,6 @@
+import 'package:andriod/views/selectsms.view.dart';
 import 'package:flutter/material.dart';
-import 'package:andriod/views/adminhome_view.dart';
+//import 'package:andriod/views/adminhome_view.dart';
 import 'package:andriod/views/home_view.dart';
 import 'package:andriod/views/resent_view.dart';
 
@@ -34,7 +35,7 @@ class StudentAttendanceScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MyApp()));
+                context, MaterialPageRoute(builder: (context) => Selectsms()));
             // Handle back button press here
           },
         ),
@@ -80,7 +81,8 @@ class StudentAttendanceScreen extends StatelessWidget {
                     onPressed: () {
                       // Implement SMS sending functionality here
                     },
-                    style: ElevatedButton.styleFrom(
+                    style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32), // Adjust padding
+    textStyle: TextStyle(fontSize: 15),
                       primary: const Color.fromARGB(
                           255, 91, 28, 102), // Change color to purple
                     ),
@@ -99,7 +101,8 @@ class StudentAttendanceScreen extends StatelessWidget {
 
                       // Implement SMS checking functionality here
                     },
-                    style: ElevatedButton.styleFrom(
+                    style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32), // Adjust padding
+    textStyle: TextStyle(fontSize: 15),
                       primary: const Color.fromARGB(
                           255, 79, 23, 88), // Change color to purple
                     ),

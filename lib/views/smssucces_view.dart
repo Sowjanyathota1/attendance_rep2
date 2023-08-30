@@ -1,9 +1,10 @@
-import 'package:andriod/views/sent_view.dart';
+import 'package:andriod/views/resent_view.dart';
+//import 'package:andriod/views/sent_view.dart';
 import 'package:flutter/material.dart';
 
 import 'home_view.dart';
 
-class Postedad extends StatelessWidget {
+class Smssucess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,17 +13,17 @@ class Postedad extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {Navigator.push(context,
-                  MaterialPageRoute(builder: (context) =>StudentAttendanceApp()));
+                  MaterialPageRoute(builder: (context) =>SmsNotSentListApp()));
             // Handle back button tap
           },
         ),
         title: Text(
-          'Attendance Sheet',
+          'heyyy its finished :)',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
-        ),
+        ),centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.home),

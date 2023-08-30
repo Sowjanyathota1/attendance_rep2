@@ -45,14 +45,14 @@ class MyHomePage extends StatelessWidget {
           decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(
-                    "assets/lavendor.png"
+                    "assets/frame2.jpg"
                   ),
                   fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             DropdownButton<String>(
-              value: 'DS',style: TextStyle(       color: Color.fromARGB(255, 194, 82, 192),fontSize: 20),
+              value: 'DS',style: TextStyle(       color: Color.fromARGB(255, 194, 82, 192),fontSize: 30),
 
               onChanged: (newValue) {
                 SizedBox(
@@ -75,7 +75,7 @@ class MyHomePage extends StatelessWidget {
               ).toList(),
             ),
             DropdownButton<String>(
-              value: 'A',style: TextStyle(       color: Color.fromARGB(255, 214, 211, 214),fontSize: 20),
+              value: 'A',style: TextStyle(       color: Color.fromARGB(255, 214, 211, 214),fontSize: 30),
               onChanged: (newValue) {
                 // Handle section dropdown change
               },
@@ -101,8 +101,11 @@ class MyHomePage extends StatelessWidget {
               },
               child: Text('Submit'),
               
+              
+              
               style: ElevatedButton.styleFrom(
-                                primary: Colors.purple,
+                                primary: Colors.purple,padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32), // Adjust padding
+    textStyle: TextStyle(fontSize: 20),
               ),
             ),
           ],

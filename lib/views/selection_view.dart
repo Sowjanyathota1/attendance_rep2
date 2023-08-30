@@ -1,5 +1,6 @@
 import 'package:andriod/views/periodattendence_view.dart';
 import 'package:andriod/views/sheet_view.dart';
+//import 'package:animator/animator.dart';
 import 'package:flutter/material.dart';
 
 //import 'faculty_view.dart';
@@ -39,7 +40,7 @@ class Selection extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(20),
             child: Column(
@@ -172,6 +173,14 @@ class Selection extends StatelessWidget {
                     textStyle: TextStyle(fontSize: 18),
                   ),
                   child: Text('Click here'),
+                ),Stack(
+                  alignment: Alignment.bottomLeft,
+                  children: [
+                    Image.asset(
+                      "assets/frame2.jpg", // Replace with your asset image path
+                      height: 220,width: 4000,fit: BoxFit.cover,// Adjust the height as needed
+                    ),
+                  ],
                 ),
               ],
             ),

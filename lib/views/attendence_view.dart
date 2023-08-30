@@ -31,7 +31,7 @@ class Student extends StatelessWidget {
             ),
           ],
         ),
-        body: AttendanceScreen(),
+       body : AttendanceScreen(),
       ),
     );
   }
@@ -218,9 +218,11 @@ class AttendanceScreen extends StatelessWidget {
             style: ElevatedButton.styleFrom(primary: Colors.purple),
             child: Text('Check Cumulative Attendance',
                 style: TextStyle(fontSize: 18)),
-          ),
-        ],
-      ),
-    );
+          ),SizedBox( height: 20,),
+          Stack(alignment: Alignment.bottomCenter,
+              children: [Image.asset("assets/student.png",height: 200,width: 3000,)],)
+            
+        
+    ]),    );
   }
 }

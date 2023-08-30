@@ -9,7 +9,7 @@ class Add extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 125, 46, 118), // Purple color
+        backgroundColor: Color.fromARGB(255, 172, 84, 164), // Purple color
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -38,58 +38,63 @@ class Add extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              
-              width: 300,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 234, 229, 234),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
-                style: TextStyle(color: Colors.black, fontSize: 25),
-                decoration: InputDecoration(
-                  hintText: 'Regulation',
-                  hintStyle: TextStyle(color: Colors.black),
-                  border: InputBorder.none,
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/frame2.jpg"), fit: BoxFit.cover)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 300,
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 234, 229, 234),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  decoration: InputDecoration(
+                    hintText: 'Regulation',
+                    hintStyle: TextStyle(color: Colors.black),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 40),
-            Container(
-              width: 300,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 244, 236, 243),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
-                style: TextStyle(color: Colors.black, fontSize: 25),
-                decoration: InputDecoration(
-                  hintText: 'Branch',
-                  hintStyle: TextStyle(color: Colors.black),
-                  border: InputBorder.none,
+              SizedBox(height: 40),
+              Container(
+                width: 300,
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 244, 236, 243),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  decoration: InputDecoration(
+                    hintText: 'Branch',
+                    hintStyle: TextStyle(color: Colors.black),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Selection()));
-                // Handle UPDATE button tap
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 125, 46, 118),
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                textStyle: TextStyle(fontSize: 15),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Selection()));
+                  // Handle UPDATE button tap
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 184, 61, 173),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  textStyle: TextStyle(fontSize: 15),
+                ),
+                child: Text('UPDATE'),
               ),
-              child: Text('UPDATE'),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

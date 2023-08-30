@@ -53,42 +53,50 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ListTile(
-              title: Text(
-                'User Access',
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold), // Adjust font size as needed
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/frame.jpg"), fit: BoxFit.cover)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ListTile(
+                title: Text(
+                  'User Access',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight:
+                          FontWeight.bold), // Adjust font size as needed
+                ),
+                trailing: Switch(
+                  value: userAccess,
+                  onChanged: (value) {
+                    setState(() {
+                      userAccess = value;
+                    });
+                  },
+                ),
               ),
-              trailing: Switch(
-                value: userAccess,
-                onChanged: (value) {
-                  setState(() {
-                    userAccess = value;
-                  });
-                },
+              ListTile(
+                title: Text(
+                  'Faculty Register',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight:
+                          FontWeight.bold), // Adjust font size as needed
+                ),
+                trailing: Switch(
+                  value: facultyRegister,
+                  onChanged: (value) {
+                    setState(() {
+                      facultyRegister = value;
+                    });
+                  },
+                ),
               ),
-            ),
-            ListTile(
-              title: Text(
-                'Faculty Register',
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold), // Adjust font size as needed
-              ),
-              trailing: Switch(
-                value: facultyRegister,
-                onChanged: (value) {
-                  setState(() {
-                    facultyRegister = value;
-                  });
-                },
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

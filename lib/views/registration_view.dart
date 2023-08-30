@@ -71,6 +71,15 @@ class Register extends StatelessWidget {
                     textStyle: TextStyle(fontSize: 18),
                   ),
                   child: Text('Submit'),
+                ),SizedBox(height: 20), // Add space above the image
+                Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    Image.asset(
+                      "assets/frame2.jpg", // Replace with your asset image path
+                      height: 128,width: 3000, // Adjust the height as needed
+                    ),
+                  ],
                 ),
               ],
             ),

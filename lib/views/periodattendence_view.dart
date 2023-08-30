@@ -156,6 +156,14 @@ class _PostState extends State<Post> {
                       addSubject = value!;
                     });
                   },
+                ),Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    Image.asset(
+                      "assets/frame2.jpg", // Replace with your asset image path
+                      height: 100,width: 1000, // Adjust the height as needed
+                    ),
+                  ],
                 ),
               ],
             ),

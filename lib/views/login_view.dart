@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor:
-              Color.fromARGB(255, 110, 25, 111), // Dark purple color
+              Color.fromARGB(255, 166, 79, 168), // Dark purple color
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -63,6 +63,16 @@ class Login extends StatelessWidget {
                     textStyle: TextStyle(fontSize: 18),
                   ),
                   child: Text('Login'),
+                ),
+                 SizedBox(height: 20), // Add space above the image
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/frame2.jpg", // Replace with your asset image path
+                      height: 160,width: 2000, // Adjust the height as needed
+                    ),
+                  ],
                 ),
               ],
             ),

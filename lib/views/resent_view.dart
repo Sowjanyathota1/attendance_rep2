@@ -1,3 +1,4 @@
+import 'package:andriod/views/smssucces_view.dart';
 import 'package:flutter/material.dart';
 
 import 'sent_view.dart';
@@ -113,15 +114,27 @@ class SmsNotSentListScreen extends StatelessWidget {
       ),
       persistentFooterButtons: [
         ElevatedButton(
-          onPressed: () {
+          onPressed: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Smssucess()));
             // Implement resend SMS functionality here
           },
           style: ElevatedButton.styleFrom(
-            primary: const Color.fromARGB(
-                255, 109, 30, 122), // Change color to purple
+            primary: Color.fromRGBO(109, 30, 122, 1), padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32), // Adjust padding
+    textStyle: TextStyle(fontSize: 20), // Change color to purple
           ),
-          child: Text('Resend SMS'),
-        ),
+          child: Text('Resend SMS',)
+          ,
+        ),Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    Image.asset(
+                      "assets/sms.png", // Replace with your asset image path
+                      height: 300,width: 1000, // Adjust the height as needed
+                    ),
+                  ],
+                ),
       ],
     );
   }

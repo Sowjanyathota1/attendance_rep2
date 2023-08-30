@@ -32,12 +32,12 @@ class Faculty extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
+        body:SingleChildScrollView( 
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
-                  "https://cdni.iconscout.com/illustration/premium/thumb/female-teacher-giving-online-lecture-2995914-2493767.png"
+                  "https://cdni.iconscout.com/illustration/premium/thumb/female-teacher-giving-online-lecture-2995914-2493767.png",
                   // Replace with your logo image path
 
                   ),
@@ -69,6 +69,16 @@ class Faculty extends StatelessWidget {
                 ),
                 child: Text('Login'),
               ),
+               SizedBox(height: 20), // Add space above the image
+                Stack(
+                  alignment: Alignment.bottomCenter,
+                  children: [
+                    Image.asset(
+                      "assets/frame2.jpg", // Replace with your asset image path
+                      height: 279,width: 2000, // Adjust the height as needed
+                    ),
+                  ],
+                ),
             ],
           ),
         ),
